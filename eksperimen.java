@@ -51,7 +51,7 @@ public class eksperimen {
 
     while (ulangi != 'n');
 
-    System.out.println("Terima kasih sudah menggunakan layanan ini");
+    System.out.println("Terima kasih sudah menggunakan layanan ini!");
     System.out.println();
 
  }
