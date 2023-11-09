@@ -11,6 +11,7 @@ public class Latihan1 {
     char repeat;
 
 do{   
+    int k=0;
     System.out.println("Pilih menu: ");
     System.out.println("1. Segitiga siku2");
     System.out.println("2. Segitiga piramida");
@@ -29,7 +30,8 @@ do{
                 System.out.print("* ");
             }
         }
-        for (int k=1; k<=baris; k++){
+        
+        for (k=1; k<=baris; k++){
             jmL+=k;
         }
         System.out.println("");
@@ -50,8 +52,8 @@ do{
                 }
           System.out.println(" ");
         }
-
-        for (int k=1; k<=baris; k++){
+        
+        for (k=1; k<=baris; k++){
             jmL+=k;
         }
         System.out.println("");
