@@ -9,6 +9,8 @@ public class Latihan1 {
     int menu;
     int baris, jmL=0;
     char repeat;
+    String s;
+    s = sc.nextLine();
 
 do{   
     int k=0;
