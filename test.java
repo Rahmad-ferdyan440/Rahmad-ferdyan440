@@ -8,7 +8,7 @@ public class test {
         int baris = sc.nextInt();
 
         for (int i=1; i<=baris; i++){
-            for(int j=baris; j<baris; j--){
+            for(int j=1; j<=(baris-i); j++){
                 System.out.print(" ");
             }
             for(int p=1; p<=i; p++){
@@ -16,6 +16,17 @@ public class test {
                 }
           System.out.println();
         }
+
+        for (int i=1; i<=baris; i++){
+            for(int j=1; j<i; j++){
+                System.out.print(" ");
+            }
+            for(int p=baris; p>=i; p--){
+                    System.out.print("* ");
+                }
+          System.out.println();
+        }
+
 
     }
 }
