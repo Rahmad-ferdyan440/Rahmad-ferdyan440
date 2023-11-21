@@ -1,58 +1,41 @@
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Random;
 public class eksperimen {
 
     public static void main(String[] args) {
+    Scanner sc =  new Scanner(System.in);
+
+        Random random = new Random();
         Scanner input = new Scanner(System.in);
 
-        int menu;
-        float alfa, jamPelajaran;
-        float uas, uts, kuis, kompen, ipk;
-        char ulangi;
+        int number = random.nextInt(50)+1;
+        int kr=0, kn=50;
+        boolean success = false;
 
-    do{
-        System.out.println("=== DAFTAR MENU ===");
-        System.out.println("1. Cek IPK");
-        System.out.println("2. Denda kompen");
-        System.out.print("\nMasukkan nomor pilihan Anda: ");
-        menu=input.nextInt();
+System.out.println("PERMAINAN ANGKA BOM!");
+System.out.println("Jangan sampai pilih angka BOM!");
+System.out.println("===============================");
 
-        switch(menu){
-            case 1:
-            System.out.println("\n== CEK IPK ==");
-            System.out.println("Masukkan nilai rerata Kuis: ");
-            kuis=input.nextFloat();
-            System.out.println("Masukkan nilai UTS: ");
-            uts=input.nextFloat();
-            System.out.println("Masukkan nilai UAS: ");
-            uas=input.nextFloat();
+        do{
+            System.out.print("Tebak angka (1-50): ");
+            int answer = input.nextInt();
+            input.nextLine();
+            success = (answer == number);
+
+            if (answer > number){
+                kn=answer;
+                System.out.println("  >>Antara " +kr+ " - " + kn);
+            } else if (answer < number){ 
+                kr=answer;
+                System.out.println("  >>Antara " +kr+ " - " + kn);
+            } 
             
-            ipk=((uts*0.6F)+(uas)+(kuis*0.4F))/50F;
-            System.out.println("\n>>> Hasil IPK Anda: " +ipk+ " <<<");
-
-            break;
-            case 2:
-            System.out.println("\n== DENDA KOMPEN ==");
-            System.out.println("Masukkan jumlah jam alpha: ");
-            alfa=input.nextFloat();
-
-            jamPelajaran=alfa*50;
-            kompen=jamPelajaran*0.75F;
-
-            System.out.println("\nJumlah jam pelajaran alpha Anda (dalam menit): " +jamPelajaran+ " menit");
-            System.out.println("Waktu kompen yang harus Anda bayar adalah: >>> " +kompen+ " menit <<<");
-            break;
-            }
-
-            System.out.print("\nIngin memilih menu lain? ");
-            System.out.println("(Ketik y : untuk yes/ n : untuk no)");
-            ulangi=input.next().charAt(0);
+        } while (!success);{
             System.out.println();
-      }
-
-    while (ulangi != 'n');
-
-    System.out.println("Terima kasih sudah menggunakan layanan ini!");
-    System.out.println();
-
- }
+            System.out.println("**** BOOOMMM!!! ****");
+            System.out.println("## ANGKA BOM nya adalah " + number + " !!!");
+        }
+            
+    }
 }

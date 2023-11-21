@@ -10,7 +10,6 @@ public class Latihan1 {
     int baris, jmL=0;
     char repeat;
     String s;
-    s = sc.nextLine();
 
 do{   
     int k=0;
@@ -29,7 +28,7 @@ do{
         for (int i=1; i<=baris; i++){
             System.out.println(" ");
             for(int j=1; j<=i; j++){
-                System.out.print("* ");
+                System.out.print("*#");
             }
         }
         
