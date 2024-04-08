@@ -1,19 +1,18 @@
 import java.util.Scanner;
 public class anothertest {
-    
-    static String tulisPesan(){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan tulisan: ");
-        String tulis = sc.nextLine();
-        return tulis;
-    }
-
-    static void cetakPesan(){
-        String pesan = tulisPesan();
-        System.out.println(pesan);
-    }
-
     public static void main(String[] args) {
-        cetakPesan();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan nilai: ");
+        int jml = sc.nextInt();
+
+        for (int i=0; i<jml; i++){
+            for (int j=jml-i; j<=jml; j++){
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
+
     }
+
 }
+// 0 = 1; 1=2; 2=3; 3=4; 4=5
